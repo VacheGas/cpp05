@@ -1,23 +1,25 @@
-#ifndef BUREAUCRAT_HPP
-#define BUREAUCRAT_HPP
-#define MAXBUR 150
-#define MINBUR 1
+#ifndef FORM_HPP
+#define FORM_HPP
 #include "Bureaucrat.hpp"
+
 class Form
 {
 private:
-	const				std::string name
-	bool				iswhether;
+	const				std::string name;
+	bool				isSigned;
 	const int			grade_sign;
 	const int			grade_execute;
 public:
 	Form(std::string const &new_name, int new_garde_sign, int new_grade_execute);
+	Form(Form const &other);
+	Form();
+	~Form();
 	Form &operator=(Form const &other);
 	std::string const &getName(void) const;
 	int getGrade_sign(void) const;
 	int getGrade_execute(void) const;
+	bool getbwSigned();
 	void beSigned(Bureaucrat const &bureaucrat);
-	bool getisSigned();
 	class GradeTooHighException : public std::exception
 	{
 		virtual const char* what() const throw();
@@ -30,7 +32,6 @@ public:
 	{
 		virtual const char* what() const throw();
 	};
-	Bureaucrat(Bureaucrat const &other);
-	~Form();
+	
 };
-#endif
+# endif

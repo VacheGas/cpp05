@@ -4,6 +4,8 @@
 #define MINBUR 1
 # include <iostream>
 # include <exception>
+# include <string>
+//class Form;
 class Bureaucrat
 {
 private:
