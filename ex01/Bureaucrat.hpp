@@ -28,7 +28,7 @@ public:
 
 	std::string const &getName(void) const;
 	int getGrade(void) const;
-
+	void signForm(bool isexecute, std::string const &reason) const;
 	void incrementGrade(void);
 	void decrementGrade(void);
 

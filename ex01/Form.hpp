@@ -18,7 +18,7 @@ public:
 	std::string const &getName(void) const;
 	int getGrade_sign(void) const;
 	int getGrade_execute(void) const;
-	bool getbwSigned();
+	bool getbwSigned() const;
 	void beSigned(Bureaucrat const &bureaucrat);
 	class GradeTooHighException : public std::exception
 	{
@@ -28,10 +28,12 @@ public:
 	{
 		virtual const char* what() const throw();
 	};
-	class AssignException : public std::exception
+	/*class AssignException : public std::exception
 	{
 		virtual const char* what() const throw();
-	};
+	};*/
 	
 };
+
+std::ostream &operator<<(std::ostream &out, Form const &obj_form);
 # endif

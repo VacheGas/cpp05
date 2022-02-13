@@ -79,3 +79,11 @@ Bureaucrat &Bureaucrat::operator=(Bureaucrat const &other)
 		throw (Bureaucrat::GradeTooHighException());
 	return (*this);
 }
+
+void Bureaucrat::signForm(bool isSigned, std::string const &reason) const
+{
+	if(isSigned)
+		std::cout << "it's ok" << std::endl;
+	else
+		std::cout << "its not ok because " << reason << std::endl;   
+}
