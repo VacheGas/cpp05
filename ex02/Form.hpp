@@ -28,11 +28,7 @@ public:
 	{
 		virtual const char* what() const throw();
 	};
-	/*class AssignException : public std::exception
-	{
-		virtual const char* what() const throw();
-	};*/
-	
+	void checkExecute(const Bureaucrat &buro);
 };
 
 std::ostream &operator<<(std::ostream &out, Form const &obj_form);

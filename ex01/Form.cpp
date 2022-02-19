@@ -51,11 +51,6 @@ Form::Form(Form const &other) : name(other.name) , grade_sign(other.grade_sign),
 		throw (Bureaucrat::GradeTooLowException());
 }
 
-/*const char*  Form::AssignException::what() const throw()
-{
-	return (" chkpav(Form)");
-}*/
-
 void Form::beSigned(Bureaucrat const &bureaucrat)
 {
 	if (this->isSigned)

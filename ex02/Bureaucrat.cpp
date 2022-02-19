@@ -1,5 +1,5 @@
-
 #include "Bureaucrat.hpp"
+
 std::string const &Bureaucrat::getName(void) const
 {
 	return (this->name);
