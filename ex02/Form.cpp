@@ -87,8 +87,8 @@ std::ostream &operator<<(std::ostream &out, Form const &obj_form)
 	return (out);
 }
 
-Bureaucrat::checkExecute(const Bureaucrat &buro)
+Form::checkExecute(const Bureaucrat &buro)
 {
 	if (this->grade_execute < buro.getGrade())
-		throw GradeTooLowException("");
+		throw GradeTooLowException("cane not execute burocrate grade is low");
 }

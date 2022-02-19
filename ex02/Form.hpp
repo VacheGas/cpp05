@@ -28,6 +28,10 @@ public:
 	{
 		virtual const char* what() const throw();
 	};
+	class GradeAssighn : public std::exception
+	{
+		virtual const char* what() const throw();
+	};
 	void checkExecute(const Bureaucrat &buro);
 };
 
