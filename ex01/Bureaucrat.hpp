@@ -5,6 +5,8 @@
 # include <iostream>
 # include <exception>
 # include <string>
+#include "Form.hpp"
+class Form;
 //class Form;
 class Bureaucrat
 {
@@ -28,7 +30,7 @@ public:
 
 	std::string const &getName(void) const;
 	int getGrade(void) const;
-	void signForm(bool isexecute, std::string const &reason) const;
+	void signForm(Form & form) const;
 	void incrementGrade(void);
 	void decrementGrade(void);
 

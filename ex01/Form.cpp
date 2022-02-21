@@ -51,19 +51,12 @@ Form::Form(Form const &other) : name(other.name) , grade_sign(other.grade_sign),
 		throw (Bureaucrat::GradeTooLowException());
 }
 
-void Form::beSigned(Bureaucrat const &bureaucrat)
+void Form::beSigned(Bureaucrat bureaucrat)
 {
-	if (this->isSigned)
+	if (bureaucrat.getGrade() > this->grade_sign)
 	{
-		bureaucrat.signForm(false , "It has alrady been appointed");
 		throw Form::GradeTooLowException();
 	}
-	if (bureaucrat.getGrade() < this->grade_sign)
-	{
-		bureaucrat.signForm(false , "low grade");
-		throw Form::GradeTooLowException();
-	}
-	bureaucrat.signForm(true, "oki");
 	this->isSigned = true;
 }
 
