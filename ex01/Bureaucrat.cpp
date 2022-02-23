@@ -82,12 +82,11 @@ Bureaucrat &Bureaucrat::operator=(Bureaucrat const &other)
 void Bureaucrat::signForm(Form & form) const
 {
 	if(form.getbwSigned())
-		std::cout << "its not ok because arden signed" << std::endl;   
+		std::cout << this->getName() << " its not ok because "<<form.getName()<<" arden signed" << std::endl;   
 	else
 	{
 		try
 		{
-			//printf("\n%i %i\n",form.getGrade_sign(), this->grade);
 			form.beSigned(*this);
 			std::cout << this->name << " signs " << form.getName() << std::endl;
 		}

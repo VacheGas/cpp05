@@ -14,5 +14,6 @@ public:
 	PresidentialPardonForm(const PresidentialPardonForm& other);
 	~PresidentialPardonForm(void);
 	PresidentialPardonForm &operator=(const PresidentialPardonForm &other);
+	Form *get_clone();
 };
 #endif

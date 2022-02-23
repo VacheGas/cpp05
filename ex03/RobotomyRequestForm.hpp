@@ -14,6 +14,7 @@ public:
 	RobotomyRequestForm(const RobotomyRequestForm& other);
 	~RobotomyRequestForm(void);
 	RobotomyRequestForm &operator=(const RobotomyRequestForm &other);
+	Form *get_clone();
 };
 
 #endif

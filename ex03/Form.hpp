@@ -34,6 +34,7 @@ public:
 		virtual const char* what() const throw();
 	};
 	void checkExecute(const Bureaucrat &buro) const;
+	virtual Form	*get_clone() = 0;
 };
 
 std::ostream &operator<<(std::ostream &out, Form const &obj_form);

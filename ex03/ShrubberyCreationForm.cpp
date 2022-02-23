@@ -18,7 +18,7 @@ void ShrubberyCreationForm::Execute(const Bureaucrat& executor) const
 		std::cout << "Error while opennig a file!" << std::endl;
 		return ;
 	}
-    std::cout << "execute shurbery" << std::endl;
+    std::cout << executor.getName()<< " execute shurbery" << std::endl;
     myfile << "###########################'`################################" << std::endl <<
 "###########################  V##'############################" << std::endl << 
 "#########################V'  `V  ############################" << std::endl <<
@@ -94,6 +94,11 @@ ShrubberyCreationForm::~ShrubberyCreationForm(void)
 
 ShrubberyCreationForm::ShrubberyCreationForm() : Form("ShrubberyCreationForm", 145, 137)
 {
+}
+
+Form *ShrubberyCreationForm::get_clone()
+{
+    return (new ShrubberyCreationForm(this->_target));
 }
 
 /*###########################'`################################

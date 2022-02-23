@@ -40,3 +40,8 @@ RobotomyRequestForm::~RobotomyRequestForm(void)
 RobotomyRequestForm::RobotomyRequestForm() : Form("RobotomyRequestForm", 72, 45)
 {
 }
+
+Form *RobotomyRequestForm::get_clone()
+{
+    return (new RobotomyRequestForm(this->_target));
+}

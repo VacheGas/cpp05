@@ -37,3 +37,8 @@ void PresidentialPardonForm::Execute(const Bureaucrat& executor) const
     this->checkExecute(executor);
     std::cout << executor.getName() << " Tells us "<< this->_target << " has been pardoned by Zafod Beeblebrox." << std::endl;
 }
+
+Form *PresidentialPardonForm::get_clone()
+{
+    return (new PresidentialPardonForm(this->_target));
+}

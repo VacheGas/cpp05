@@ -76,8 +76,6 @@ std::ostream &operator<<(std::ostream &out, Form const &obj_form)
 		signed_str = "Signed";
 	else
 		signed_str = "UnSigned";
-	out << "Name = " << obj_form.getName() << "  Grade sign = " << obj_form.getGrade_sign() << " getGrade execute = " << obj_form.getGrade_execute() << " signed = "<< signed_str << std::endl; 
-	//out << "Name = " << obj_form.getName() ; 
-	
+	out << "Name = " << obj_form.getName() << "  Grade sign = " << obj_form.getGrade_sign() << " getGrade execute = " << obj_form.getGrade_execute() << " signed = "<< signed_str << std::endl;
 	return (out);
 }

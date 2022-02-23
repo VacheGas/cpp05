@@ -15,5 +15,6 @@ public:
 	ShrubberyCreationForm(const ShrubberyCreationForm& other);
 	~ShrubberyCreationForm(void);
 	ShrubberyCreationForm &operator=(const ShrubberyCreationForm &other);
+	Form *get_clone();
 };
 #endif
