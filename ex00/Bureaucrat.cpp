@@ -14,14 +14,14 @@ void Bureaucrat::incrementGrade()
 {
 	if ((this->grade + 1) > MINBUR)
 		throw (Bureaucrat::GradeTooLowException());
-	this->grade++;
+	this->grade--;
 }
 
 void Bureaucrat::decrementGrade()
 {
 	if ((this->grade - 1) < MAXBUR)
 		throw (Bureaucrat::GradeTooHighException());
-	this->grade--;
+	this->grade++;
 }
 
 Bureaucrat::Bureaucrat(/* args */)
